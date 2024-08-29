@@ -8,7 +8,6 @@ class Client(models.Model):
     name_client = models.CharField(max_length=60, unique=True)
     address_client = models.CharField(max_length=255)
     phone_client = models.CharField(max_length=15, unique=True)
-    email_client = models.EmailField(verbose_name="Email", unique=True)
     description_client = models.TextField(max_length=2000)
     is_active = models.BooleanField(default=True)
 

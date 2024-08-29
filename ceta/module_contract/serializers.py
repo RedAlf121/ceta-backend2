@@ -19,7 +19,6 @@ class ClientSerializer(serializers.ModelSerializer):
         name_client = res.get('name_client')  
         address_client = res.get('address_client')  
         phone_client = res.get('phone_client')  
-        email_client = res.get('email_client')
         
         # Validate name_client
         if not is_valid_alpha(name_client):
@@ -52,12 +51,6 @@ class ClientSerializer(serializers.ModelSerializer):
                     'phone_client': 'This field is not a valid phone number'
                 }) 
             
-        # Validate email_client
-        if  email_client == None or is_empty(email_client):
-            raise serializers.ValidationError({
-                'email_client': 'This field is required.'
-            })
-
         return res   
 
 class ContractSerializer(serializers.ModelSerializer):  

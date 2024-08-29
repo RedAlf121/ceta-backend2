@@ -13,6 +13,8 @@ class ContractViewSet(ModelGenericView):
 
 class PaymentTermViewSet(ModelGenericView):
     model = PaymentTerm
+    serializer_class = PaymentTermSerializer
+
 
 class PaymentEmployeeViewSet(ModelGenericView):
     #permission_classes = (IsAuthenticated,)
