@@ -85,7 +85,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "db_gestion_ceta",
         "USER": "postgres",
-        "PASSWORD": "3517",
+        "PASSWORD": "postgres",
         "HOST": "localhost",
         "PORT": "5432",
     }
